@@ -1,0 +1,28 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Unit {{ id }}</h1>
+        <h2>Level 1 Problems</h2>
+        {% for t in topics %}
+            {% if t.topic_level == 1 %}
+                <div><a href="{{ url_for('myproject.topic_page', id=id, topic_id=t.topic_id) }}">{{ t.topic_level }}.{{ t.Number }} {{ t.topic }}</a></div>
+            {% endif %}
+        {% endfor %}
+        <h2>Level 2 Problems</h2>
+        {% for t in topics %}
+            {% if t.topic_level == 2 %}
+                <div><a href="{{ url_for('myproject.topic_page', id=id, topic_id=t.topic_id) }}">{{ t.topic_level }}.{{ t.Number }} {{ t.topic }}</a></div>
+            {% endif %}
+        {% endfor %}
+        <h2>Level 3 Problems</h2>
+        {% for t in topics %}
+            {% if t.topic_level == 3 %}
+                <div><a href="{{ url_for('myproject.topic_page', id=id, topic_id=t.topic_id) }}">{{ t.topic_level }}.{{ t.Number }} {{ t.topic }}</a></div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

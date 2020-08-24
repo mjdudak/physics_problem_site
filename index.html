@@ -3,9 +3,11 @@
 {% block content %}
 <div class="container">
   <div class="jumbotron">
-    <h1>Welcome to your new project!</h1>
-    <p>Replace this message with your own content in <code>{{ PROJECT_PATH }}/index.html</code>.</p>
-    <p>Learn more on the <a href="_example.html">example page</a>.</p>
+    <h1>Physics I Problems</h1>
+    <p>This site is where you will get all of the physics problems assigned this year. Navigate below to find a problem you want to try, and then turn it in on the Google Classroom assignment for that unit.</p>
+    {% for u in units %}
+      <h2><a href="{{ url_for('myproject.unit_page', id=u.unit) }}">Unit {{ u.unit }}: {{ u.unit_name }}</a></h2>
+    {% endfor %}
   </div>
 </div>
 {% endblock content %}
