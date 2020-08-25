@@ -16,7 +16,7 @@
       <ul class="nav navbar-nav">
         <li><a href="/index.html">Home</a></li>
         {% for u in units %}
-        <li><a href="{{ url_for('myproject.unit_page', id=u.unit) }}">Unit {{ u.unit }}</a></li>
+          <li><a href="{{ url_for('myproject.unit_page', id=u.unit) }}">Unit {{ u.unit }}</a></li>
         {% endfor %}
       </ul>
       
