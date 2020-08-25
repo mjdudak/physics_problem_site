@@ -14,6 +14,7 @@
     <div class="jumbotron">
         <h1>Unit {{ id }}</h1>
         <h2>{{ topic.topic_level }}.{{ topic.Number }} {{ topic.topic }}</h2>
+        <p><b>Directions: </b>{{ topic.directions }}</p>
         {% for p in problems %}
             <p>
                 <b>{{ p.problem_number }})</b> {{ p.problem_words }}
