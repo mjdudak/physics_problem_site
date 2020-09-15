@@ -5,6 +5,10 @@
     img {
   max-height: 400px;
 }
+.problem {
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
 </style>
 {% endblock css %}
 
@@ -16,6 +20,7 @@
         <h2>{{ topic.topic_level }}.{{ topic.Number }} {{ topic.topic }}</h2>
         <p><b>Directions: </b>{{ topic.directions }}</p>
         {% for p in problems %}
+            <div class="problem">
             <p>
                 <b>{{ p.problem_number }})</b> {{ p.problem_words }}
                 {% if p.problem_graphics_1 %}
@@ -24,7 +29,7 @@
                 {% if p.problem_graphics_2 %}
                     <p><img src="/images/{{ p.problem_graphics_2 }}" /></p>
                 {% endif %}
-            </p>
+            </p></div>
         {% endfor %}
     </div>
 </div>
