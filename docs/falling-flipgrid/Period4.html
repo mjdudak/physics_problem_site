@@ -1,0 +1,10 @@
+<body>
+  <h1>Flipgrid Falling Assignment</h1>
+  <p>Click the following link to open up one of your peers videos. After you have watched it, go to <a href="https://padlet.com/matthew_dudak/56bipn74gsbgoeau">this Padlet</a> and post a summary of what the video said.</p>
+  <a href="" id="clicklink">Random Flipgrid here.</a>
+  <script>
+    var links_list = ["https://flipgrid.com/s/5wwy1HPayn6xPsxn","https://flipgrid.com/s/jzwuEgb3WAto944f","https://flipgrid.com/s/uq14PMCYFy1jicep","https://flipgrid.com/s/Ztzy1ssxbns7cM2s","https://flipgrid.com/s/w49aJABLFvHg1ctz","https://flipgrid.com/s/Adg2rZRyDL2NmCD8","https://flipgrid.com/s/gfJb7T4kzjDoTugs","https://flipgrid.com/s/exwkMveDJaGvk_rf","https://flipgrid.com/s/Szsk977RKAuhHChg","https://flipgrid.com/s/HTNSkoR4Ki4U2N4N","https://flipgrid.com/s/9b1eZSy1u2TEQ5Hx","https://flipgrid.com/s/MepsznjcMpYbzu9z","https://flipgrid.com/s/3CpJxSZk8cB_5X1q","https://flipgrid.com/s/zySeFVMoTk2Bsp7M","https://flipgrid.com/s/W2LGs9zRJ6_PFNBG"];
+    var rand_link = links_list[Math.floor(Math.random()*links_list.length)];
+    document.getElementById("clicklink").href = rand_link;
+  </script>
+</body>
